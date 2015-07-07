@@ -1,0 +1,21 @@
+#ifndef SERIAL_H
+#define SERIAL_H
+
+#include <QObject>
+#include <QSerialPort>
+#include <QSerialPortInfo>
+
+class Serial: public QObject
+{
+    Q_OBJECT
+    
+public:
+    Serial(QSerialPortInfo *portInfo);
+    
+signals:
+    void error(QString portSignature, QString error);
+    void answerReceived(QString portSignature, QString answer);
+    
+};
+
+#endif // SERIAL_H

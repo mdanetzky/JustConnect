@@ -1,0 +1,7 @@
+- Check SIM present
+- Read IMSI
+- parse IMSI
+- find APN based on IMSI
+- Wait for Network Attached
+- send Connect with APN
+- wait for inetUp
